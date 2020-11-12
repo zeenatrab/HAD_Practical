@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AngularJs Events</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        </head>
+        <body>
+        
+            <div ng-app="myApp"   ng-controller="myCtrl">
+                <h1>Click event & show, hide (Toggle) event</h1>
+            <button ng-click="tog()">Toggle</button>
+                <div ng-show="showMe">
+                This is example text for toggle event
+                </div>
+                 </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope){
+                $scope.count = 0;
+                $scope.showMe = false;
+                $scope.tog = function(){
+                 $scope.showMe = |$scope.showMe;
+                }
+
+                });
+        </script>
+    </body>
+ </html>
+         
